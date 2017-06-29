@@ -1,7 +1,7 @@
 {
   "name": "nyt_react",
   "version": "1.0.0",
-  "description": "Search, display and save article from the NYTimes",
+  "description": "Search, display and save articles from the NYTimes",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
