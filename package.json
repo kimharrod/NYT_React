@@ -1,0 +1,27 @@
+{
+  "name": "nyt_react",
+  "version": "1.0.0",
+  "description": "Search, display and save article from the NYTimes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimharrod/NYT_React.git"
+  },
+  "keywords": [
+    "mern",
+    "mongoose",
+    "express",
+    "react",
+    "node"
+  ],
+  "author": "Kim Harrod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimharrod/NYT_React/issues"
+  },
+  "homepage": "https://github.com/kimharrod/NYT_React#readme"
+}
