@@ -38,7 +38,7 @@ db.once("open", function() {
 	console.log("Mongoose connection successful.");
 });
 
-// Routes
+// Express Routes
 // ---------------------------------------------------
 
 // Route to retrieve saved articles from the MongoDB
