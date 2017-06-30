@@ -41,8 +41,81 @@ var Form = React.createClass({
 		// Clear the input field after submit
 		this.setState({ end: "" });
 
-
-
 	},
+
+	// Here we describe the component render method
+	// We use local states & respond through the props
+	// Props are data & methods passed down from parent to child component
+	render: function() {
+
+		return (
+
+			<div className="panel panel-default">
+
+				<div className="panel-heading">
+					<h3 className="panel-title text-center">Query</h3>
+				</div>
+
+				<div className="panel-body text-center">
+
+					<form onSubmit={this.handleSubmit}>
+						<div className="form-group">
+
+							<input
+								type="text"
+								value={this.state.term}
+								className="form-control text-center"
+								id="term"
+								placeholder="Search term"
+								onChange={this.handleChange}
+								required
+							/>
+
+							<br/>
+
+							<input
+								type="date"
+								value={this.state.start}
+								className="form-control text-center"
+								id="start"
+								placeholder="Start date YYYYMMDD"
+								onChange={this.handleChange}
+								required
+							/>
+
+							<br/>
+
+							<input
+								type="date"
+								value={this.state.end}
+								className="form-control text-center"
+								id="end"
+								placeholder="End date YYYYMMDD"
+								onChange={this.handleChange}
+								required
+							/>
+
+							<br/>
+
+							<button
+								className="bn btn-primary"
+								type="submit"
+							>
+							</button>
+
+						</div>
+					</form>
+				</div>
+			</div>
+
+		); // end return (callback)
+
+	} // end render method
+
+}); // end Form component
+
+
+// Export the component back for use in other files
+module.exports = Form;
 
 
