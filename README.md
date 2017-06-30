@@ -34,7 +34,7 @@ NYT_React works as follows:
 
 ### Dependencies and Packages
 
-The app requires the 'mongoose', 'express', 'react', 'react-dom', request', 'axios', logger', 'morgan' and 'body-parser' npm packages.
+The app requires the 'mongoose', 'express', 'react', 'react-dom', request', 'axios', logger', 'morgan', 'moment' and 'body-parser' npm packages.
 
 Development dependencies are as follows: 'webpack', babel-core' 'babel-loader', and'babel-preset-es2015'.
   
