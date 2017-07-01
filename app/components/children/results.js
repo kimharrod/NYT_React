@@ -1,7 +1,7 @@
 // Include React
 var React = require("react");
 
-// Component that displays article search results
+// Component that displays article search results and saves articles to database
 var Results = React.createClass({
 
 	// Save article data to mongoDB
@@ -37,6 +37,48 @@ var Results = React.createClass({
 
 	},
 
-	
+	// Render the search term results component and set up save buttons
+	render: function() {
 
-});
+		// "arts" is an object containing the search term results (i.e. articles)
+		let arts = this.props.articles;
+		let saveFunction = this.saveStory;
+
+		// Iterate through the object containing the search results and prepare for display
+		var artList = Object.keys(arts).map(function(s){
+			return (
+				<li key={arts[s].title} >Title: {arts[s].title} <button onClick={saveFunction} id={arts[s]._id} data-title={arts[s].title} data-url={arts[s].url} data-date={arts[s].date} type="button" className="btn btn-muted pull-right">Save</button><br/>
+					URL: <a href={arts.[s].url} target="_blank">{arts[s].url}</a> <br/>
+					Date: {arts[s].date}<br/>
+				</li>
+
+			) // end prepare for display
+		
+		}); // end iterate function 
+
+		return (
+
+			<div className="panel panel-default">
+
+				<div className="panel-heading">
+					<h3 className="panel-title text-center">Results</h3>
+				</div>
+
+				<div className="panel-body">
+
+					<ol>
+					{artList}
+					<ol>
+
+				</div>
+
+			</div>
+
+		);
+	
+	} // end render function
+
+}); // end article search results component
+
+// Export the component back for use in other files
+module.exports = Results;
