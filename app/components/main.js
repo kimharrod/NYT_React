@@ -20,7 +20,14 @@ var Main = React.createClass({
 
 	// Lifecycle method to run every time the main component loads
 	// In order to have previously saved articles appear when the application is run
-	// componentDidMount: function() {}
+	componentDidMount: function() {
+
+		helpers.getSaved().then(function(data) {
+
+			this.setState({ saved: data });
+
+		}.bind(this));
+	},
 
 	// Lifecycle method to run every time the main component updates its props or state
 	componentDidUpdate: function(prevProps, prevState) {
@@ -36,14 +43,9 @@ var Main = React.createClass({
 
 			}.bind(this));
 
-			// helpers.getSaved().then(function(data){
+		} // End if
 
-
-
-			
-
-		}
-	},
+	}, // End componentDidUpdate
 
 	// Function to set search term
 	setTerm: function(term) {
@@ -59,6 +61,18 @@ var Main = React.createClass({
 	setEnd: function(end) {
 		this.setState({ searchEnd: end });
 	},
+
+	// Function to trigger refresh and rerender of saved article component
+	rerenderSaved: function() {
+
+		helpers.getSaved().then(function(data) {
+
+			this.setState({ saved: data});
+
+		}.bind(this));
+
+	}, // End rerenderSaved
+	
 
 	// Render the main component
 	render: function() {
@@ -76,15 +90,18 @@ var Main = React.createClass({
 						</p>
 					</div>
 				
-					<div className="col-md-12">
+					<div className="col-md-6">
 						<Form setTerm={this.setTerm} setStart={this.setStart} setEnd={this.setEnd} />
 					</div>
 
-					<div className="col-md-12">
-						<Results article={this.state.results} />
+					<div className="col-md-6">
+						<Saved article={this.state.saved} rerenderSaved={this.rerenderSaved}/>
 					</div>
 
-					
+					<div className="col-md-12">
+						<Results article={this.state.results} rerenderSaved={this.rerenderSaved}/>
+					</div>
+		
 
 				</div>
 
