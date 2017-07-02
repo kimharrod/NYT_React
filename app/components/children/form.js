@@ -64,7 +64,7 @@ var Form = React.createClass({
 							<input
 								type="text"
 								value={this.state.term}
-								className="form-control text-center"
+								className="form-control"
 								id="term"
 								placeholder="Search term"
 								onChange={this.handleChange}
@@ -76,7 +76,7 @@ var Form = React.createClass({
 							<input
 								type="date"
 								value={this.state.start}
-								className="form-control text-center"
+								className="form-control"
 								id="start"
 								placeholder="Start date YYYYMMDD"
 								onChange={this.handleChange}
@@ -88,7 +88,7 @@ var Form = React.createClass({
 							<input
 								type="date"
 								value={this.state.end}
-								className="form-control text-center"
+								className="form-control"
 								id="end"
 								placeholder="End date YYYYMMDD"
 								onChange={this.handleChange}
@@ -109,7 +109,7 @@ var Form = React.createClass({
 				</div>
 			</div>
 
-		); // end return (callback)
+		); // end jsx
 
 	} // end render method
 

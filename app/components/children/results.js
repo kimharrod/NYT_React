@@ -74,7 +74,7 @@ var Results = React.createClass({
 
 			</div>
 
-		);
+		); // end jsx
 	
 	} // end render function
 
