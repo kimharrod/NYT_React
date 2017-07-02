@@ -46,7 +46,7 @@ var Results = React.createClass({
 		// Iterate through the object containing the search results and prepare for display
 		var artList = Object.keys(arts).map(function(s){
 			return (
-				<li key={arts[s].title} >Title: {arts[s].title} <button onClick={saveFunction} id={arts[s]._id} data-title={arts[s].title} data-url={arts[s].url} data-date={arts[s].date} type="button" className="btn btn-muted pull-right">Save</button><br/>
+				<li key={arts[s].title} >Title: {arts[s].title} <button onClick={saveFunction} id={arts[s]._id} data-title={arts[s].title} data-url={arts[s].url} data-date={arts[s].date} type="button" className="btn btn-primary btn-muted pull-right">Save</button><br/>
 					URL: <a href={arts[s].url} target="_blank">{arts[s].url}</a> <br/>
 					Date: {arts[s].date}<br/>
 				</li>
@@ -60,7 +60,7 @@ var Results = React.createClass({
 			<div className="panel panel-default">
 
 				<div className="panel-heading">
-					<h3 className="panel-title text-center">Results</h3>
+					<h3 className="panel-title text-center">Search Results</h3>
 				</div>
 
 				<div className="panel-body">

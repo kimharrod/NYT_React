@@ -32,7 +32,7 @@ var Saved = React.createClass({
 		// Iterate through the object containing the search results and prepare for display
 		var artList = Object.keys(arts).map(function(s) {
 			return (
-				<li key={arts[s].title} >Title: {arts[s].title} <button onClick={deleteFunction} data-id={arts[s]._id} data-title={arts[s].title} data-url={arts[s].url} data-date={arts[s].date} type="button" className="btn btn-muted pull-right">Delete</button><br/>
+				<li key={arts[s].title} >Title: {arts[s].title} <button onClick={deleteFunction} data-id={arts[s]._id} data-title={arts[s].title} data-url={arts[s].url} data-date={arts[s].date} type="button" className="btn btn-primary btn-muted pull-right">Delete</button><br/>
 					url: <a href={arts[s].url} target="_blank">{arts[s].url}</a> <br/>
 					Date: {arts[s].date}<br/>
 				</li>
@@ -46,7 +46,7 @@ var Saved = React.createClass({
 			<div className="panel panel-default">
 
 				<div className="panel-heading">
-					<h3 className="panel-title text-center">Saved</h3>
+					<h3 className="panel-title text-center">Saved Articles</h3>
 				</div>
 
 				<div className="panel-body">

@@ -44,11 +44,14 @@ var helpers = {
 
 	    	for (var i=0; i < res.data.response.docs.length; i++) {
 
+	    		var tempDate = moment(res.data.response.docs[i].pub_date, 'YYYY-MM-DDTHH:mm:ssZ');
+          		var newDate = tempDate.format('MM/DD/YYYY');
+
 	    		story.push({
 
 	    		  title: res.data.response.docs[i].headline.main,
 	    		  url: res.data.response.docs[i].web_url,
-	    		  date: res.data.response.docs[i].pub_date,
+	    		  date: newDate,
 	    		  _id: res.data.response.docs[i]._id
 	    		
 	    		});
@@ -86,7 +89,7 @@ var helpers = {
 			  		});
 
 			  	} // end for loop
-			  	
+
 			  		return story;
 
 		  	}); // end ajax callback
