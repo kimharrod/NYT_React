@@ -10,14 +10,14 @@ module.exports = {
 
 	// Transformations to be performed
 	module: {
-		loaders: [
+		rules: [
 			{
 			  // Work with files that have a .js or .jsx extenstion
 			  test: /\.jsx?$/,
 
 			  // Webpack will only process files in the app folder
 			  include: /app/,
-			  loader: "babel",
+			  loader: "babel-loader",
 			  query: {
 
 			  	// Specific transformations used

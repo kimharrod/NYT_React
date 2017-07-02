@@ -4,7 +4,7 @@ var React = require("react");
 var Form = React.createClass({
 
 	// Set a generic state associated with the search term
-	getInitalState: function() {
+	getInitialState: function() {
 		return { term: "" };
 	},
 
@@ -20,7 +20,7 @@ var Form = React.createClass({
 	// When a user submits...
 	handleSubmit: function(event) {
 
-		// Prevent the form from trying to submit itself
+		// Prevent the form from trying to submit it self
 		event.preventDefault();
 
 		// Set the parent to have the search term
@@ -101,6 +101,7 @@ var Form = React.createClass({
 								className="bn btn-primary"
 								type="submit"
 							>
+							Submit
 							</button>
 
 						</div>

@@ -6,4 +6,4 @@ var ReactDOM = require("react-dom");
 var Main = require("./components/Main");
 
 // Allow rendering of Main component
-ReactDOM.render(<Main />, document.getElementbyId("app"));
+ReactDOM.render(<Main />, document.getElementById("app"));

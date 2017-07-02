@@ -32,7 +32,7 @@ var Results = React.createClass({
 		  });
 
 		  // Will re-render the Saved section (function in Main.js)
-		  this.props.rerenderSaved();
+		  //this.props.rerenderSaved();
 	
 
 	},
@@ -41,14 +41,14 @@ var Results = React.createClass({
 	render: function() {
 
 		// "arts" is an object containing the search term results (i.e. articles)
-		let arts = this.props.articles;
+		let arts = this.props.article;
 		let saveFunction = this.saveStory;
 
 		// Iterate through the object containing the search results and prepare for display
 		var artList = Object.keys(arts).map(function(s){
 			return (
 				<li key={arts[s].title} >Title: {arts[s].title} <button onClick={saveFunction} id={arts[s]._id} data-title={arts[s].title} data-url={arts[s].url} data-date={arts[s].date} type="button" className="btn btn-muted pull-right">Save</button><br/>
-					URL: <a href={arts.[s].url} target="_blank">{arts[s].url}</a> <br/>
+					URL: <a href={arts[s].url} target="_blank">{arts[s].url}</a> <br/>
 					Date: {arts[s].date}<br/>
 				</li>
 
@@ -68,7 +68,7 @@ var Results = React.createClass({
 
 					<ol>
 					{artList}
-					<ol>
+					</ol>
 
 				</div>
 

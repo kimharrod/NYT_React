@@ -4,7 +4,7 @@ var React = require("react");
 // Include sub-components (children)
 var Form = require("./children/Form");
 var Results = require("./children/Results");
-var Saved = require("./children/Saved");
+//var Saved = require("./children/Saved");
 
 // Include helper functions
 var helpers = require("./utils/helpers");
@@ -46,8 +46,19 @@ var Main = React.createClass({
 	},
 
 	// Function to set search term
+	setTerm: function(term) {
+		this.setState({ searchTerm: term });
+	},
+
 	// Function to set search start date
+	setStart: function(start) {
+		this.setState({ searchStart: start });
+	},
+
 	// Function to set search end date
+	setEnd: function(end) {
+		this.setState({ searchEnd: end });
+	},
 
 	// Render the main component
 	render: function() {
@@ -73,9 +84,7 @@ var Main = React.createClass({
 						<Results article={this.state.results} />
 					</div>
 
-					<div className="col-md-12">
-
-					</div>
+					
 
 				</div>
 
