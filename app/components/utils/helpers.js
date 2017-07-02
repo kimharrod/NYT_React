@@ -61,8 +61,39 @@ var helpers = {
 	}, // end runQuery function
 
 	// getSaved function that pulls saved records from the mongoDB
+	getSaved: () => {
 
-};
+		return $.ajax({
+			url: '/api/saved/',
+			type: 'get'
+		})
+		  	.done(function(data) {
+
+		  		var story = [];
+
+			  	// Build an array of the saved articles
+			  	for (var i=0; i < data.length; i++) {
+
+			  		var arts = Object.keys(data).map(function(s) {
+
+			  			story.push({
+			  				title: data[s].title,
+			  				url: data[s].url,
+			  				date: data[s].date,
+			  				id: data[s]._id
+			  			});
+
+			  		});
+
+			  	} // end for loop
+			  	
+			  		return story;
+
+		  	}); // end ajax callback
+
+	}, // end getSaved
+
+}; // end helpers
 
 // Export the helpers object (includes runQuery and getSaved)
 module.exports = helpers;
