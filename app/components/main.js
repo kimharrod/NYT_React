@@ -4,7 +4,7 @@ var React = require("react");
 // Include sub-components (children)
 var Form = require("./children/Form");
 var Results = require("./children/Results");
-//var Saved = require("./children/Saved");
+var Saved = require("./children/Saved");
 
 // Include helper functions
 var helpers = require("./utils/helpers");
@@ -84,9 +84,9 @@ var Main = React.createClass({
 				<div className="row">
 					
 					<div className="jumbotron">
-						<h2 className="text-center">New York Times Article Saver</h2>
+						<h2 className="text-center">New York Times Article Search</h2>
 						<p className="text-center">
-							<em>Search and save articles from the New York Times</em>
+							<em>Search and save articles for a given data range</em>
 						</p>
 					</div>
 				

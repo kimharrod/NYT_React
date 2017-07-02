@@ -98,7 +98,7 @@ var Form = React.createClass({
 							<br/>
 
 							<button
-								className="bn btn-primary"
+								className="btn btn-primary btn-muted"
 								type="submit"
 							>
 							Submit

@@ -32,9 +32,8 @@ var Results = React.createClass({
 		  });
 
 		  // Will re-render the Saved section (function in Main.js)
-		  //this.props.rerenderSaved();
+		  this.props.rerenderSaved();
 	
-
 	},
 
 	// Render the search term results component and set up save buttons

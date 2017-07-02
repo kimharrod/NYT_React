@@ -7,7 +7,7 @@ var Saved = React.createClass({
 
 	// Function to delete an article from MongoDB
 	deleteStory: function(event) {
-		event.preventDefault():
+		event.preventDefault();
 
 		var artId = event.target.getAttribute('data-id');
 
