@@ -21,11 +21,13 @@ NYTReact works as follows:
 
 2. A search returns a list of articles including the article title, date and a link to the full text of the article, which opens in a separate tab.
 
+3. There is a save button to the right of each article, allowing the user to save articles for later reference. 
+
 ![NYTReact search results](http://fios.vc/NYTReactresults.jpg "Search results")
 
-3. There is a save button to the right of each article, allowing the user to save articles for later reference. Once the save button for an article is clicked, the article is added to the database of saved articles, and appears in the Saved Articles section.
+4. When the save button for an article is clicked, the article is added to the database of saved articles, and appears in the Saved Articles section.
 
-4. Saved articles appear in a separate section and can be deleted. Every time an article is saved or deleted, the saved articles view is refreshed.
+5. Every time an article is saved or deleted, the Saved Articles section is refreshed.
 
 ![NYTReact saved article](http://fios.vc/NYTReactsaved.jpg "Saved article")
 
