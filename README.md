@@ -15,21 +15,19 @@ You start the app from the command line using "node server.js".
 
 NYTReact works as follows:
 
-1. When a user arrives at the NYTReact site, they can search for articles from the New York Times using a date range.   
+1. When a user arrives at the NYTReact site, they can search for articles from the New York Times by entering a search term and a date range.   
 
-
+![NYTReact landing page](http://fios.vc/NYTReactsearch.jpg "Landing Page")
 
 2. A search returns a list of articles including the article title, date and a link to the full text of the article, which opens in a separate tab.
 
+![NYTReact search results](http://fios.vc/NYTReactresults.jpg "Search results")
 
-
-3. There is a save button to the right of each article, allowing the user to save articles for later reference. Once the save button for an article is clicked, the button color is changes to a lighter gray to indicate it has been clicked.
-
-
+3. There is a save button to the right of each article, allowing the user to save articles for later reference. Once the save button for an article is clicked, the article is added to the database of saved articles, and appears in the Saved Articles section.
 
 4. Saved articles appear in a separate section and can be deleted. Every time an article is saved or deleted, the saved articles view is refreshed.
 
-
+![NYTReact saved article](http://fios.vc/NYTReactsaved.jpg "Saved article")
 
 
 ### Dependencies and Packages
